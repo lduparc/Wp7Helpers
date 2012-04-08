@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Windows Phone Helpers : Some C# helpers for wp7 applications" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Windows Phone Helpers</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/lomoussw/Wp7Helpers">Fork Me on GitHub</a>
+
+          <h1 id="project_title">Windows Phone Helpers</h1>
+          <h2 id="project_tagline">Some C# helpers for wp7 applications</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/lomoussw/Wp7Helpers/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/lomoussw/Wp7Helpers/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>Design Grid.</h3>
+
+<p>This helper display a grid over the application to set better UI margin. 
+On App.xaml.cs initialization simply add this line :</p>
+
+<pre><code>DesignGridHelper.setVisible(bool);    // activate grid
+DesignGridHelper.Color = Colors.Red;  // set grid color
+DesignGridHelper.Opacity = 0.7;       // set opacity between 0-1
+</code></pre>
+
+<h3>Navigation</h3>
+
+<p>Two methods to navigate to page and purge backstack
+Use like this :</p>
+
+<pre><code>NavigationHelper.Navigate(string uri);
+NavigationHelper.PurgeNavigationalBackstack(PhoneApplicationFrame rootFrame);
+</code></pre>
+
+<h3>Validators</h3>
+
+<p>Regexp class helper  to validate user input
+Validator types supported : 
+<strong>Email</strong>,
+<strong>icq</strong>,
+<strong>creditcard number</strong>,
+<strong>english</strong>,
+<strong>url</strong>,
+<strong>IPv4</strong>,
+<strong>IPv6</strong>,
+<strong>name</strong>.</p>
+
+<p>Usage : </p>
+
+<pre><code>Validators.Validate(string inputText, validatorType type);
+</code></pre>
+
+<h3>WebClient</h3>
+
+<p>Simple helper to GET/POST Data over HttpRequest</p>
+
+<pre><code>WebClientHelper.GET(WebClient wc, string url, Action&lt;object, DownloadStringCompletedEventArgs&gt; callback);
+
+WebClientHelper.POST(WebClient wc, string url, string content, string contentType, Action&lt;object, UploadStringCompletedEventArgs&gt; callback);
+</code></pre>
+
+<h3>MD5</h3>
+
+<p>MD5Core class for simple data encoding</p>
+
+<pre><code>byte[] GetHash(byte[] input);
+string GetHashString(string input, Encoding encoding);
+string GetHashString(byte[] input);
+byte[] GetHash(string input);
+byte[] GetHash(string input, Encoding encoding);
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Windows Phone Helpers maintained by <a href="https://github.com/lomoussw">lomoussw</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
